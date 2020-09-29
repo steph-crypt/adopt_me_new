@@ -28286,35 +28286,48 @@ if ("development" === 'production') {
   module.exports = require('./cjs/react-dom.development.js');
 }
 },{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"Pet.js":[function(require,module,exports) {
-var Pet = function Pet(_ref) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Pet;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Pet(_ref) {
   var name = _ref.name,
       animal = _ref.animal,
       breed = _ref.breed;
-  return React.createElement("div", {}, [React.createElement("h1", {}, name), React.createElement("h2", {}, animal), React.createElement("h2", {}, breed)]);
-};
-},{}],"App.js":[function(require,module,exports) {
+  return _react.default.createElement("div", {}, [_react.default.createElement("h1", {}, name), _react.default.createElement("h2", {}, animal), _react.default.createElement("h2", {}, breed)]);
+}
+
+;
+},{"react":"../node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-require("./Pet.js");
+var _Pet = _interopRequireDefault(require("./Pet.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
   return _react.default.createElement("div", {
     id: "something-important"
-  }, [_react.default.createElement("h1", {}, "Adopt me!"), _react.default.createElement(Pet, {
+  }, [_react.default.createElement("h1", {}, "Adopt me!"), _react.default.createElement(_Pet.default, {
     name: "Rosie",
     animal: "Cat",
     breed: "Tabby"
-  }), _react.default.createElement(Pet, {
+  }), _react.default.createElement(_Pet.default, {
     name: "ِSpace",
     animal: "Cat",
     breed: "Tabby"
-  }), _react.default.createElement(Pet, {
+  }), _react.default.createElement(_Pet.default, {
     name: "Macky",
     animal: "Dog",
     breed: "Beagle"
@@ -28350,7 +28363,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53956" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61165" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

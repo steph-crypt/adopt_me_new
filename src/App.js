@@ -1,7 +1,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import './Pet.js';
+import Pet from './Pet.js';
 
 const App = () => {
     return React.createElement("div", { id: "something-important" }, [
