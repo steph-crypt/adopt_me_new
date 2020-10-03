@@ -29998,6 +29998,16 @@ var SearchParams = function SearchParams() {
       animal = _useState4[0],
       setAnimal = _useState4[1];
 
+  var _useState5 = (0, _react.useState)(""),
+      _useState6 = _slicedToArray(_useState5, 2),
+      breed = _useState6[0],
+      setBreed = _useState6[1];
+
+  var _useState7 = (0, _react.useState)([]),
+      _useState8 = _slicedToArray(_useState7, 2),
+      breeds = _useState8[0],
+      setBreeds = _useState8[1];
+
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "search-params"
   }, /*#__PURE__*/_react.default.createElement("h1", null, location), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("label", {
@@ -30014,7 +30024,7 @@ var SearchParams = function SearchParams() {
   }, "Animal", /*#__PURE__*/_react.default.createElement("select", null, /*#__PURE__*/_react.default.createElement("input", {
     id: "animal",
     value: animal,
-    placeholder: "Location",
+    placeholder: "Animal",
     onChange: function onChange(e) {
       return setAnimal(e.target.value);
     },
@@ -30026,6 +30036,23 @@ var SearchParams = function SearchParams() {
       key: animal,
       value: animal
     }, animal);
+  }))), /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "breed"
+  }, "Breed", /*#__PURE__*/_react.default.createElement("select", {
+    id: "breed",
+    value: breed,
+    onChange: function onChange(e) {
+      return setBreed(e.target.value);
+    },
+    onBlur: function onBlur(e) {
+      return setBreed(e.target.value);
+    },
+    disabled: breeds.length === 0
+  }, /*#__PURE__*/_react.default.createElement("option", null, "All"), breeds.map(function (breedString) {
+    return /*#__PURE__*/_react.default.createElement("option", {
+      key: breedString,
+      value: breedString
+    }, breedString);
   }))), /*#__PURE__*/_react.default.createElement("button", null, "Submit")));
 };
 
@@ -30076,7 +30103,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61594" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51899" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
