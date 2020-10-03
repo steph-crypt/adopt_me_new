@@ -30011,7 +30011,7 @@ var SearchParams = function SearchParams() {
     }
   })), /*#__PURE__*/_react.default.createElement("label", {
     htmlFor: "animal"
-  }, "Animal", /*#__PURE__*/_react.default.createElement("input", {
+  }, "Animal", /*#__PURE__*/_react.default.createElement("select", null, /*#__PURE__*/_react.default.createElement("input", {
     id: "animal",
     value: animal,
     placeholder: "Location",
@@ -30023,9 +30023,10 @@ var SearchParams = function SearchParams() {
     }
   }), /*#__PURE__*/_react.default.createElement("option", null, "All"), _pet.ANIMALS.map(function (animal) {
     return /*#__PURE__*/_react.default.createElement("option", {
+      key: animal,
       value: animal
     }, animal);
-  })), /*#__PURE__*/_react.default.createElement("button", null, "Submit")));
+  }))), /*#__PURE__*/_react.default.createElement("button", null, "Submit")));
 };
 
 var _default = SearchParams;
@@ -30075,7 +30076,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58698" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61594" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
