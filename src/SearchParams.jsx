@@ -14,21 +14,26 @@ const SearchParams = () => {
             id="location"
             value={location}
             placeholder="Location"
-            onChange={e => setLocation(e.target.value)} />
+            onChange={(e) => setLocation(e.target.value)}
+          />
         </label>
         <label htmlFor="animal">
           Animal
-          <input
-            id="animal"
-            value={animal}
-            placeholder="Location"
-            onChange={e => setAnimal(e.target.value)}
-            onBlur={e => setAnimal(e.target.value)} />
-
-          <option>All</option>
-          {ANIMALS.map(animal => (
-            <option value={animal}>{animal}</option>
-          ))}
+          <select>
+            <input
+              id="animal"
+              value={animal}
+              placeholder="Location"
+              onChange={(e) => setAnimal(e.target.value)}
+              onBlur={(e) => setAnimal(e.target.value)}
+            />
+            <option>All</option>
+            {ANIMALS.map((animal) => (
+              <option key={animal} value={animal}>
+                {animal}
+              </option>
+            ))}
+          </select>
         </label>
         <button>Submit</button>
       </form>
