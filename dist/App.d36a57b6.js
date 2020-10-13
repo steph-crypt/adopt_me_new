@@ -30994,7 +30994,22 @@ class Details extends _react.default.component {
     }, console.error);
   }
 
-  render() {}
+  render() {
+    if (this.state.loading) {
+      return /*#__PURE__*/_react.default.createElement("h1", null, "loading...");
+    }
+
+    const {
+      animal,
+      breed,
+      location,
+      description,
+      name
+    } = this.state;
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "details"
+    }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, name), /*#__PURE__*/_react.default.createElement("h2", null, `${animal} - ${breed} - ${location}`), /*#__PURE__*/_react.default.createElement("button", null, "Adopt me!"), /*#__PURE__*/_react.default.createElement("p", null, `${description}`)));
+  }
 
 }
 
@@ -32910,7 +32925,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61218" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62581" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
