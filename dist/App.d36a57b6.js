@@ -30968,9 +30968,35 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Details = props => {
-  return /*#__PURE__*/_react.default.createElement("pre", null, /*#__PURE__*/_react.default.createElement("code", null, JSON.stringify(props, null, 4)));
-};
+class Details extends _react.default.component {
+  //JS class that will inherit from a react component
+  constructor(props) {
+    super(props);
+    Object.assign(oldState, newState);
+    this.state = {
+      loading: true
+    };
+  }
+
+  componentDidMount() {
+    pet.animal(this.props.id).then(({
+      animal
+    }) => {
+      this.setState({
+        name: animal.name,
+        animal: animal.type,
+        location: `${animal.contact.address.city}, ${animal.contact.address.state}`,
+        description: animal.description,
+        media: animal.photos,
+        breed: animal.breeds.primary,
+        loading: false
+      });
+    }, console.error);
+  }
+
+  render() {}
+
+}
 
 var _default = Details;
 exports.default = _default;
@@ -32884,7 +32910,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57828" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61218" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
