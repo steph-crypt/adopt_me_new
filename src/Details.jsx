@@ -1,16 +1,9 @@
 import React from "react";
+import pet from "@frontendmasters/pet";
 
-class Details extends React.component {
+class Details extends React.Component {
   //JS class that will inherit from a react component
-  constructor(props) {
-    super(props);
-
-    Object.assign(oldState, newState)
-
-    this.state = {
-      loading: true
-    };
-  }
+ state = { loading:true };
   componentDidMount () {
     pet.animal(this.props.id)
       .then(({ animal }) => {
