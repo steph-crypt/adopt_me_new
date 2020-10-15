@@ -6,9 +6,7 @@ import ErrorBoundary from "./ErrorBoundary"
 class Details extends React.Component {
   state = { loading: true };
   componentDidMount() {
-    pet
-      .animal(this.props.id)
-      .then(({ animal }) => {
+    pet.animal(this.props.id).then(({ animal }) => {
         this.setState({
           name: animal.name,
           animal: animal.type,
@@ -48,7 +46,7 @@ export default function DetailsWithErrorBoundary(props) {
   return (
     <ErrorBoundary>
       <Details {...props} />
-      <Details id={props.id} />
+    <Details id={props.id} />
     </ErrorBoundary>
   );
 }
